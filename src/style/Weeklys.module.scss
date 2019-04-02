@@ -1,0 +1,8 @@
+@import './constants.scss';
+
+.Weeklys {
+    grid-column: 5 / 9;
+    background-color: $purple;
+    margin-top: 3rem;
+    font-size: 2em;
+}

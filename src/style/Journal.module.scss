@@ -1,0 +1,8 @@
+@import './constants.scss';
+
+.Journal {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: min-content min-content;
+}

@@ -1,0 +1,80 @@
+@import './constants.scss';
+
+.WritingBlock {
+    margin-top: 3rem;
+    grid-column: 5 / 9;
+    background-color: white;
+    border-radius: 1rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+    padding-bottom: 3rem;
+
+    &_Title {
+        font-size: 3rem;
+        font-family: $headerFont;
+        margin: 1rem 0 0 0;
+    }
+
+    &_Entry {
+        width: 70%;
+        
+        &:not(:first-child) {
+            margin-top: 3.5rem;
+        }
+
+        &__Question {
+
+
+            &__Header {
+                display: flex;
+                align-items: center;
+
+                &__Logo {
+                    margin-right: .5rem; 
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    color: $purple;
+                }
+
+                &__Q {
+                    margin: 0;
+                    font-size: 2rem;
+                    font-weight: 300;
+                }
+            }
+
+            &__Input {
+                border: none;
+                border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+                width: 100%;
+                font-size: 1.7rem;
+                outline: none;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &_Footer {
+        display: flex;
+        width: 100%;
+        margin-top: 5rem;
+        padding: 0 3rem;
+
+        &__Date {
+            margin-right: auto;
+            font-size: 1.5rem;
+        }
+
+        &__Btn {
+            background-color: $purple;
+            border: none;
+            font-size: 1.5rem;
+            padding: .8rem 2.7rem;
+            border: 1px solid $black;
+            border-radius: 5px;
+        }
+    }
+}

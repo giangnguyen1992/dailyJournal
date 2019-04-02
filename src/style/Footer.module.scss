@@ -1,0 +1,36 @@
+@import './constants.scss';
+
+.Footer {
+    grid-column: 3 / 11;
+    display: flex;
+    flex-direction: row;
+    color: rgba(128, 128, 128, 0.6);
+    justify-items: center;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    padding-top: 1.4rem;
+
+    &_Copy {
+        margin-right: auto;
+        font-size: 1.4rem;
+    }
+
+    &_Menu {
+        display: flex;
+        font-size: 1.1rem;
+        
+        &__item {
+            list-style: none;
+           
+            &:not(:last-child) {
+                border-right: 1px solid rgba(128, 128, 128, 0.3);
+                padding-right: 1rem;
+                margin-right: 1rem;
+            }
+            
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
