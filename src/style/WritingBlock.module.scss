@@ -1,7 +1,6 @@
 @import './constants.scss';
 
 .WritingBlock {
-    margin-top: 3rem;
     grid-column: 5 / 9;
     background-color: white;
     border-radius: 1rem;
@@ -9,8 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5rem;
     padding-bottom: 3rem;
+    margin: 2rem 0;
 
     &_Title {
         font-size: 3rem;

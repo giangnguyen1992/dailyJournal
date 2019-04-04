@@ -1,0 +1,27 @@
+@import './constants.scss';
+
+.History {
+    grid-column: 5 / 9;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    &_Date {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    &_Btn {
+        border: none;
+        background-color: transparent;
+
+        &__Logo {
+            color: $purple;
+            font-size: 1.1rem;
+        }
+    }
+}
