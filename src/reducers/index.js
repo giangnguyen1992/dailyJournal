@@ -1,9 +1,8 @@
-import { handleActions } from 'redux-actions';
-import { TEST_ACTION } from '../constants/actionTypes';
+import { combineReducers } from 'redux';
+import weeklyReducer from './weeklyReducer';
 
-export default handleActions(
-    {
-        [TEST_ACTION]: (state, actions) => console.log('Daaaaaaaaanm Boiiii')
-    },
-    {}
-);
+const rootReducer = combineReducers({
+    weeklyReducer
+});
+
+export default rootReducer;
