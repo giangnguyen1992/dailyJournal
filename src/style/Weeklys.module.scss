@@ -52,6 +52,7 @@
             display: flex;
             align-items: center;
             margin-bottom: 2rem;
+            cursor: pointer;
 
             &__Logo {
                 color: $purple;
@@ -69,6 +70,7 @@
         &__Q2 {
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             &__Logo {
                 color: $purple;

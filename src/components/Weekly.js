@@ -22,14 +22,14 @@ const Weeklys = props => {
                         <span className='far fa-circle fa-stack-2x'></span>
                         <strong className='fa-stack-1x'>1</strong>
                     </span>
-                    <h3 onClick={props.done} className={`${styles.Weeklys_Challenges__Q1__Quest} ${props.status ? styles.done : ''}`}>Your first weekly challenge</h3>
+                    <h3 onClick={props.firstLine} className={`${styles.Weeklys_Challenges__Q1__Quest} ${props.firstStatus ? styles.done : ''}`}>Your first weekly challenge</h3>
                 </div>
                 <div className={styles.Weeklys_Challenges__Q2}>
                     <span className={`${styles.Weeklys_Challenges__Q2__Logo} fa-stack`}>
                         <span className='far fa-circle fa-stack-2x'></span>
                         <strong className='fa-stack-1x'>2</strong>
                     </span>
-                    <h3 onClick={props.done2} className={`${styles.Weeklys_Challenges__Q2__Quest} ${props.status2 ? styles.done : ''}`}>Your second weekly challenge</h3>
+                    <h3 onClick={props.secondLine} className={`${styles.Weeklys_Challenges__Q2__Quest} ${props.secondStatus ? styles.done : ''}`}>Your second weekly challenge</h3>
                 </div>
             </div>
         </div>

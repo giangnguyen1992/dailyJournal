@@ -1,78 +1,79 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
 import styles from '../style/WritingBlock.module.scss';
 
-class WritingBlock extends Component {
-    render() {
+let WritingBlock = (props) =>  {
         return (
-            <div className={styles.WritingBlock}>
+            <form onSubmit={props.onSubmit} className={styles.WritingBlock}>
                 <h2 className={styles.WritingBlock_Title}>Daily Journal Entry</h2>
                 <div className={styles.WritingBlock_Entry}>
-                    <div className={styles.WritingBlock_Entry__Question}>
-                        <div className={styles.WritingBlock_Entry__Question__Header}>
-                            <span className={`${styles.WritingBlock_Entry__Question__Header__Logo} fa-stack`}>
+                    
+                        <div className={styles.WritingBlock_Entry__Header}>
+                            <span className={`${styles.WritingBlock_Entry__Header__Logo} fa-stack`}>
                                 <span className='far fa-circle fa-stack-2x'></span>
                                 <strong className='fa-stack-1x'>1</strong>
                             </span>
-                            <h3 className={styles.WritingBlock_Entry__Question__Header__Q}>Erste Frage...</h3>
+                            <label htmlFor='firstQuestion' className={styles.WritingBlock_Entry__Header__Q}>Erste Frage...</label>
                         </div>
-                        <input className={styles.WritingBlock_Entry__Question__Input} type='text' name='firstQuestion' placeholder=''/>
-                    </div>
+                        <Field name='firstQuestion' component='input' type='text' className={styles.WritingBlock_Entry__Input} />
+                    
                 </div>
                 <div className={styles.WritingBlock_Entry}>
-                    <div className={styles.WritingBlock_Entry__Question}>
-                        <div className={styles.WritingBlock_Entry__Question__Header}>
-                            <span className={`${styles.WritingBlock_Entry__Question__Header__Logo} fa-stack`}>
+                    
+                        <div className={styles.WritingBlock_Entry__Header}>
+                            <span className={`${styles.WritingBlock_Entry__Header__Logo} fa-stack`}>
                                 <span className='far fa-circle fa-stack-2x'></span>
                                 <strong className='fa-stack-1x'>2</strong>
                             </span>
-                            <h3 className={styles.WritingBlock_Entry__Question__Header__Q}>Erste Frage...</h3>
+                            <label htmlFor='secondQuestion' className={styles.WritingBlock_Entry__Header__Q}>Zweite Frage...</label>
                         </div>
-                        <input className={styles.WritingBlock_Entry__Question__Input} type='text' name='firstQuestion' placeholder=''/>
-                    </div>
+                        <Field name='secondQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                    
                 </div>
                 <div className={styles.WritingBlock_Entry}>
-                    <div className={styles.WritingBlock_Entry__Question}>
-                        <div className={styles.WritingBlock_Entry__Question__Header}>
-                            <span className={`${styles.WritingBlock_Entry__Question__Header__Logo} fa-stack`}>
+                    
+                        <div className={styles.WritingBlock_Entry__Header}>
+                            <span className={`${styles.WritingBlock_Entry__Header__Logo} fa-stack`}>
                                 <span className='far fa-circle fa-stack-2x'></span>
                                 <strong className='fa-stack-1x'>3</strong>
                             </span>
-                            <h3 className={styles.WritingBlock_Entry__Question__Header__Q}>Erste Frage...</h3>
+                            <label htmlFor='thirdQuestion' className={styles.WritingBlock_Entry__Header__Q}>DritteFrage...</label>
                         </div>
-                        <input className={styles.WritingBlock_Entry__Question__Input} type='text' name='firstQuestion' placeholder=''/>
-                    </div>
+                        <Field name='thirdQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                    
                 </div>
                 <div className={styles.WritingBlock_Entry}>
-                    <div className={styles.WritingBlock_Entry__Question}>
-                        <div className={styles.WritingBlock_Entry__Question__Header}>
-                            <span className={`${styles.WritingBlock_Entry__Question__Header__Logo} fa-stack`}>
+                    
+                        <div className={styles.WritingBlock_Entry__Header}>
+                            <span className={`${styles.WritingBlock_Entry__Header__Logo} fa-stack`}>
                                 <span className='far fa-circle fa-stack-2x'></span>
                                 <strong className='fa-stack-1x'>4</strong>
                             </span>
-                            <h3 className={styles.WritingBlock_Entry__Question__Header__Q}>Erste Frage...</h3>
+                            <label htmlFor='forthQuestion' className={styles.WritingBlock_Entry__Header__Q}>Vierte Frage...</label>
                         </div>
-                        <input className={styles.WritingBlock_Entry__Question__Input} type='text' name='firstQuestion' placeholder=''/>
-                    </div>
+                        <Field name='forthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                    
                 </div>
                 <div className={styles.WritingBlock_Entry}>
-                    <div className={styles.WritingBlock_Entry__Question}>
-                        <div className={styles.WritingBlock_Entry__Question__Header}>
-                            <span className={`${styles.WritingBlock_Entry__Question__Header__Logo} fa-stack`}>
+                    
+                        <div className={styles.WritingBlock_Entry__Header}>
+                            <span className={`${styles.WritingBlock_Entry__Header__Logo} fa-stack`}>
                                 <span className='far fa-circle fa-stack-2x'></span>
                                 <strong className='fa-stack-1x'>5</strong>
                             </span>
-                            <h3 className={styles.WritingBlock_Entry__Question__Header__Q}>Erste Frage...</h3>
+                            <label htmlFor='fifthQuestion' className={styles.WritingBlock_Entry__Header__Q}>Fünfte Frage...</label>
                         </div>
-                        <input className={styles.WritingBlock_Entry__Question__Input} type='text' name='firstQuestion' placeholder=''/>
-                    </div>
+                        <Field name='fifthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                    
                 </div>
                 <div className={styles.WritingBlock_Footer}>
-                    <p className={styles.WritingBlock_Footer__Date}>Datum...</p>
-                    <button className={styles.WritingBlock_Footer__Btn}>Post!</button>
+                    <p className={styles.WritingBlock_Footer__Date}>{new Date().toLocaleString()}</p>
+                    <button type='submit' className={styles.WritingBlock_Footer__Btn}>Post!</button>
                 </div>
-            </div>
+            </form>
         );
-    };
 };
 
-export default WritingBlock;
+export default reduxForm({
+    form: 'journal'
+})(WritingBlock);

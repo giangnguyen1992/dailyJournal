@@ -1,8 +1,8 @@
 import { LINE_THROUGH, LINE_THROUGH_2 } from '../constants/actionTypes';
 
 const initialState = {
-    weeklyDone: false,
-    weeklyDone_2: false
+    firstDone: false,
+    secondDone: false 
 };
 
 export default function weeklyReducer (state = initialState, action) {
@@ -10,13 +10,13 @@ export default function weeklyReducer (state = initialState, action) {
         case LINE_THROUGH:
             return {
                 ...state,
-                weeklyDone: !state.weeklyDone
+                firstDone: !state.firstDone
             }
 
         case LINE_THROUGH_2:
             return {
                 ...state,
-                weeklyDone_2: !state.weeklyDone_2
+                secondDone: !state.secondDone
             }
 
         default: 
