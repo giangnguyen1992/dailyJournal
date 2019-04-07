@@ -56,24 +56,13 @@
         
     }
 
-    &_Footer {
-        display: flex;
-        width: 100%;
-        margin-top: 5rem;
-        padding: 0 3rem;
-
-        &__Date {
-            margin-right: auto;
-            font-size: 1.5rem;
-        }
-
-        &__Btn {
-            background-color: $purple;
-            border: none;
-            font-size: 1.5rem;
-            padding: .8rem 2.7rem;
-            border: 1px solid $black;
-            border-radius: 5px;
-        }
+    &__Btn {
+        background-color: $purple;
+        border: none;
+        font-size: 1.5rem;
+        padding: 1rem 2.7rem;
+        border: 1px solid $black;
+        border-radius: 5px;
+        margin: 3.5rem 2rem 0 auto;
     }
 }

@@ -66,10 +66,7 @@ let WritingBlock = (props) =>  {
                         <Field name='fifthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
                     
                 </div>
-                <div className={styles.WritingBlock_Footer}>
-                    <p className={styles.WritingBlock_Footer__Date}>{new Date().toLocaleString()}</p>
-                    <button type='submit' className={styles.WritingBlock_Footer__Btn}>Post!</button>
-                </div>
+                <button type='submit' className={styles.WritingBlock__Btn}>Post!</button>
             </form>
         );
 };
