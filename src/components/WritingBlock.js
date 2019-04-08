@@ -15,7 +15,7 @@ let WritingBlock = (props) =>  {
                             </span>
                             <label htmlFor='firstQuestion' className={styles.WritingBlock_Entry__Header__Q}>Erste Frage...</label>
                         </div>
-                        <Field name='firstQuestion' component='input' type='text' className={styles.WritingBlock_Entry__Input} />
+                        <Field required name='firstQuestion' component='input' type='text' className={styles.WritingBlock_Entry__Input} />
                     
                 </div>
                 <div className={styles.WritingBlock_Entry}>
@@ -27,7 +27,7 @@ let WritingBlock = (props) =>  {
                             </span>
                             <label htmlFor='secondQuestion' className={styles.WritingBlock_Entry__Header__Q}>Zweite Frage...</label>
                         </div>
-                        <Field name='secondQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                        <Field required name='secondQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
                     
                 </div>
                 <div className={styles.WritingBlock_Entry}>
@@ -39,7 +39,7 @@ let WritingBlock = (props) =>  {
                             </span>
                             <label htmlFor='thirdQuestion' className={styles.WritingBlock_Entry__Header__Q}>DritteFrage...</label>
                         </div>
-                        <Field name='thirdQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                        <Field required name='thirdQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
                     
                 </div>
                 <div className={styles.WritingBlock_Entry}>
@@ -51,7 +51,7 @@ let WritingBlock = (props) =>  {
                             </span>
                             <label htmlFor='forthQuestion' className={styles.WritingBlock_Entry__Header__Q}>Vierte Frage...</label>
                         </div>
-                        <Field name='forthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                        <Field required name='forthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
                     
                 </div>
                 <div className={styles.WritingBlock_Entry}>
@@ -63,7 +63,7 @@ let WritingBlock = (props) =>  {
                             </span>
                             <label htmlFor='fifthQuestion' className={styles.WritingBlock_Entry__Header__Q}>Fünfte Frage...</label>
                         </div>
-                        <Field name='fifthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                        <Field required name='fifthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
                     
                 </div>
                 <button type='submit' className={styles.WritingBlock__Btn}>Post!</button>

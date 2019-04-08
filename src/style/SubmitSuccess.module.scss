@@ -1,0 +1,24 @@
+@import './constants.scss';
+
+.SubmitSuccess {
+    grid-column: 5 / 9;
+    background-color: $purple;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+
+    &_Title {
+        font-size: 2rem;
+        color: $white;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    &_Icon {
+        font-size: 3rem;
+        color: $white;
+        margin-left: auto;
+    }
+};
