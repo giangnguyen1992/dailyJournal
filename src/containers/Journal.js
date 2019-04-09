@@ -24,7 +24,7 @@ class Journal extends Component {
             <main className={styles.Journal}>
                 <Weeklys firstStatus={this.props.firstDone} secondStatus={this.props.secondDone} firstLine={this.props.lineThrough} secondLine={this.props.lineThrough2}/>
                 {this.props.unmountForm ? <SubmitSuccess /> : <WritingBlock onSubmit={this.submit} />}
-                {this.props.newHistory.map((i, index) => <History arrInd={index} obj={i} key={index}/>).reverse()}
+                {this.props.newHistory.map((i, index) => <History obj={i} key={index}/>).reverse()}
             </main>
         );
     };
