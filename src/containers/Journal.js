@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getFormValues } from 'redux-form';
 import { lineThrough, lineThrough2 } from '../actions/weeklyAction';
 import { saveHistory, unmountSuccess } from '../actions/writingAction';
+import {weeklyData } from '../weeklyData';
 import styles from '../style/Journal.module.scss';
 
 import Weeklys from '../components/Weekly';
@@ -17,12 +18,14 @@ class Journal extends Component {
         this.props.unmountSuccess();
     };
 
-    
+    thisWeekData = ((data) => {
+        return data[Math.floor(Math.random() * 7)];
+    })(weeklyData);
 
     render() {
         return (
             <main className={styles.Journal}>
-                <Weeklys firstStatus={this.props.firstDone} secondStatus={this.props.secondDone} firstLine={this.props.lineThrough} secondLine={this.props.lineThrough2}/>
+                <Weeklys thisWeek={this.thisWeekData} firstStatus={this.props.firstDone} secondStatus={this.props.secondDone} firstLine={this.props.lineThrough} secondLine={this.props.lineThrough2}/>
                 {this.props.unmountForm ? <SubmitSuccess /> : <WritingBlock onSubmit={this.submit} />}
                 {this.props.newHistory.map((i, index) => <History obj={i} key={index}/>).reverse()}
             </main>
