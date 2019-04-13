@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from '../store/store';
+import { PersistGate } from 'redux-persist/integration/react';
+import store, { persistedStore } from '../store/store';
 import App from './App';
 import 'normalize.css';
 import '../style/GlobalStyle.scss';
@@ -8,7 +9,9 @@ import '../style/GlobalStyle.scss';
 const Root = () => {
     return (
         <Provider store={store}>
-            <App />
+            <PersistGate persistor={persistedStore} loading={null}>
+                <App />
+            </PersistGate>
         </Provider>
     );
 };
