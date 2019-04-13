@@ -2,7 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import styles from '../style/WritingBlock.module.scss';
 
-let WritingBlock = (props) =>  {
+const WritingBlock = (props) =>  {
         return (
             <form onSubmit={props.onSubmit} className={styles.WritingBlock}>
                 <h2 className={styles.WritingBlock_Title}>Daily Journal Entry</h2>

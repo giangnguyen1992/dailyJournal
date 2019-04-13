@@ -7,6 +7,18 @@
     flex-direction: column;
     color: $white;
 
+    @media screen and (max-width: $large) {
+        grid-column: 4 / 10;
+    }
+
+    @media screen and (max-width: $ipadPro) {
+        grid-column: 3 / 11;
+    }
+
+    @media screen and (max-width: $small) {
+        grid-column: 2 / 12;
+    }
+
     &_upper {
         background-color: $purple;
         display: flex;
@@ -28,7 +40,7 @@
     &_Logo {
         font-size: 4.5rem;
         color: $white;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1.8rem;
     }
 
     &_Focus {

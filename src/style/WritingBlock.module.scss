@@ -11,6 +11,22 @@
     padding-bottom: 3rem;
     margin: 2rem 0;
 
+    @media screen and (max-width: $smaller) {
+       padding-bottom: 1rem;
+    }
+
+    @media screen and (max-width: $large) {
+        grid-column: 4 / 10;
+    }
+
+    @media screen and (max-width: $ipadPro) {
+        grid-column: 3 / 11;
+    }
+
+    @media screen and (max-width: $small) {
+        grid-column: 2 / 12;
+    }
+
     &_Title {
         font-size: 3rem;
         font-family: $headerFont;
@@ -19,6 +35,10 @@
 
     &_Entry {
         width: 70%;
+
+        @media screen and (max-width: $smaller) {
+            width: 85%;
+        }
         
         &:not(:first-child) {
             margin-top: 3.5rem;

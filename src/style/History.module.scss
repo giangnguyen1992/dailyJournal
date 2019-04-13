@@ -9,6 +9,18 @@
     padding: 1rem 2rem;
     cursor: pointer;
 
+    @media screen and (min-width: $large) {
+        grid-column: 4 / 10;
+    }
+
+    @media screen and (max-width: $ipadPro) {
+        grid-column: 3 / 11;
+    }
+
+    @media screen and (max-width: $small) {
+        grid-column: 2 / 12;
+    }
+
     &_Date {
         font-size: 1.8rem;
         font-weight: 300;
@@ -38,10 +50,30 @@
     padding-bottom: 3rem;
     margin: 2rem 0;
 
+    @media screen and (max-width: $large) {
+        grid-column: 4 / 10;
+    }
+
+    @media screen and (max-width: $ipadPro) {
+        grid-column: 3 / 11;
+    }
+
+    @media screen and (max-width: $small) {
+        grid-column: 2 / 12;
+    }
+
+    @media screen and (max-width: $smaller) {
+        padding-bottom: 1rem;
+    }
+
     &_Title {
         font-size: 3rem;
         font-family: $headerFont;
         margin: 1rem 0 0 0;
+
+        @media screen and (max-width: $bigSmartphone) {
+            font-size: 2.8rem;
+          }
     }
 
     &_Entry {
@@ -49,6 +81,10 @@
         
         &:not(:first-child) {
             margin-top: 3.5rem;
+        }
+
+        @media screen and (max-width: $smaller) {
+            width: 85%;
         }
 
             &__Header {
