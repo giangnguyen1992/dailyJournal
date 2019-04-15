@@ -1,9 +1,10 @@
-import { LINE_THROUGH, LINE_THROUGH_2, SAVE_WEEK } from '../constants/actionTypes';
+import { LINE_THROUGH, LINE_THROUGH_2, SAVE_WEEK, SAVE_WEEKNOW } from '../constants/actionTypes';
 
 const initialState = {
     firstDone: false,
     secondDone: false,
-    thisWeek: {}
+    thisWeek: {},
+    weekNow : 0
 };
 
 export default function weeklyReducer (state = initialState, action) {
@@ -25,6 +26,12 @@ export default function weeklyReducer (state = initialState, action) {
                 ...state,
                 thisWeek: action.payload
             }
+
+        case SAVE_WEEKNOW:
+            return {
+                ...state,
+                weekNow: action.payload
+            }    
 
         default: 
             return state;    
