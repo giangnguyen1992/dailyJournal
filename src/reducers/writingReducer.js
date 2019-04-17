@@ -1,4 +1,4 @@
-import { SAVE_HISTORY, UNMOUNT_SUCCESS, SAVE_TIMENOW } from '../constants/actionTypes';
+import { SAVE_HISTORY, UNMOUNT_SUCCESS, SAVE_TIMENOW, MOUNT_SUCCESS } from '../constants/actionTypes';
 
 const initialState = {
     historyArray: [],
@@ -17,8 +17,14 @@ export default function writingReducer(state = initialState, action) {
         case UNMOUNT_SUCCESS:
             return {
                 ...state,
-                submitSuccess: !state.submitSuccess
+                submitSuccess: true
             }
+
+        case MOUNT_SUCCESS:
+            return {
+                ...state,
+                submitSuccess: false 
+            }    
 
         case SAVE_TIMENOW:
             return {

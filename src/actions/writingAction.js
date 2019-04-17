@@ -1,4 +1,4 @@
-import { SAVE_HISTORY, UNMOUNT_SUCCESS, SAVE_TIMENOW } from '../constants/actionTypes';
+import { SAVE_HISTORY, UNMOUNT_SUCCESS, SAVE_TIMENOW, MOUNT_SUCCESS } from '../constants/actionTypes';
 
 export const saveHistory = (history) => ({
     type: SAVE_HISTORY,
@@ -7,6 +7,10 @@ export const saveHistory = (history) => ({
 
 export const unmountSuccess = () => ({
     type: UNMOUNT_SUCCESS
+});
+
+export const mountSuccess = () => ({
+    type: MOUNT_SUCCESS
 });
 
 export const saveTimeNow = (now) => ({

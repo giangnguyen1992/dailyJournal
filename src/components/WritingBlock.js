@@ -63,7 +63,7 @@ const WritingBlock = (props) =>  {
                             </span>
                             <label htmlFor='fifthQuestion' className={styles.WritingBlock_Entry__Header__Q}>Why do you want to do that?</label>
                         </div>
-                        <Field required name='fifthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input} />
+                        <Field required name='fifthQuestion' component='input' type='text'  className={styles.WritingBlock_Entry__Input}/>
                     
                 </div>
                 <button type='submit' className={styles.WritingBlock__Btn}>Post!</button>
