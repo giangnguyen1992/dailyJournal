@@ -73,14 +73,34 @@
         
     }
 
-    &__Btn {
-        background-color: $purple;
-        border: none;
-        font-size: 1.5rem;
-        padding: 1rem 2.7rem;
-        border: 1px solid $black;
-        border-radius: 5px;
-        margin: 3.5rem 2rem 0 auto;
-        cursor: pointer;
+    &_Footer {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        width: 70%;
+        margin-top: 3.5rem;
+
+        @media screen and (max-width: $smaller) {
+            width: 85%;
+        }
+
+        &__Date {
+            font-size: 1.7rem;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+            width: 20%;
+        }
+
+        &__Btn {
+            background-color: $purple;
+            border: none;
+            font-size: 1.5rem;
+            padding: 1rem 2.7rem;
+            border: 1px solid $black;
+            border-radius: 5px;
+            margin: 0 0 0 auto;
+            cursor: pointer;
+        }
     }
 }

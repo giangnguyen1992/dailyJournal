@@ -5,7 +5,6 @@ class History extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date().toLocaleDateString(),
             isExpanded: false
         }
     };
@@ -20,7 +19,7 @@ class History extends Component {
         if (this.state.isExpanded) {
             return (
                 <div className={styles.HistoryExpanded}>
-                    <h2 className={styles.HistoryExpanded_Title}>Daily Journal Entry from {this.state.date}</h2>
+                    <h2 className={styles.HistoryExpanded_Title}>Daily Journal Entry from {this.props.obj.date}</h2>
                     <div className={styles.HistoryExpanded_Entry}>
                         <div className={styles.HistoryExpanded_Entry__Header}>
                             <span className={`${styles.HistoryExpanded_Entry__Header__Logo} fa-stack`}>
@@ -83,7 +82,7 @@ class History extends Component {
         } else if (!this.state.isExpanded) {
             return (
                 <div onClick={() => this.expandNow()} className={styles.History}>
-                    <p className={styles.History_Date}>{this.state.date}</p>
+                    <p className={styles.History_Date}>{this.props.obj.date}</p>
                     <button className={styles.History_Btn}>
                         <span className={`${styles.History_Btn__Logo} fa-stack`}>
                             <span className='far fa-circle fa-stack-2x'></span>
