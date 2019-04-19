@@ -14,8 +14,10 @@ const rootReducer = combineReducers({
 
 const persistConfig = {
     key: 'journal',
+    // speichert im localstorage
     storage,
     stateReconciler: autoMergeLevel2,
+    // speichert nicht den form-reducer im localstorage
     blacklist: ['form']
 };
 

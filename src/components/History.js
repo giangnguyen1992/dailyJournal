@@ -4,6 +4,7 @@ import styles from '../style/History.module.scss';
 class History extends Component {
     constructor(props) {
         super(props);
+        // eigener State um zu schauen ob der User darauf geklickt hat oder nicht um zu expandieren bzw um zu minimieren
         this.state = {
             isExpanded: false
         }

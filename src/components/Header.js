@@ -5,6 +5,7 @@ const Header = () => {
     return (
         <header className={styles.Header}>
             <h1 className={styles.Header_Title}>Giang's Daily Journal</h1>
+            {/*MUST DO, Usermenu bauen*/}
             <i className={`${styles.Header_Icon} far fa-user-circle`} ></i>
         </header>
     );
